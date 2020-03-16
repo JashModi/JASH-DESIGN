@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="disp">
+
+    </div>
+</body>
+<!-- <script>
+    var Person = {
+        firstName: "Jash",
+        lastName: 'Modi',
+        fullName: function() {
+            return this.firstName + "-" + this.lastName;
+        }
+    };
+     Person.age = 23;
+     console.log(Person.age);
+</script> -->
+<script>
+    function Person(fname, lname, age) {
+        this.firstName = fname;
+        this.lastName = lname;
+        this.age = age;
+        this.salary = '';
+        this.display = function() {
+            return this.firstName + " " + this.lastName + " " + this.age + ' ' + this.salary;
+        }
+    }
+
+    var demoData = '';
+    demoData += '<table>';
+    demoData += '<tr>';
+    demoData += '<th>FirstName</th>';
+    demoData += '<th>LasttName</th>';
+    demoData += '<th>Age</th>';
+    demoData += '</tr>';
+    var personList = [];
+    // var father = new Person('Akshay', 'Soni', 23);
+    // var child = new Person('Jash', 'Modi', 23);
+    personList.push(new Person('Akshay', "Soni", 23));
+    personList.push(new Person('Jash', "Modi", 22));
+    // personList[1].salary = 236512;
+    personList.forEach(function(value) {
+        demoData += '<tr>';
+        demoData += '<td>' + value.firstName + '</td>';
+        demoData += '<td>' + value.lastName + '</td>';
+        demoData += '<td>' + value.age + '</td>';
+        demoData += '</tr>';
+    });
+    demoData += '</table>';
+    document.getElementById('disp').innerHTML = demoData;
+</script>
+
+</html>

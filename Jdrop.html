@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rel {
+            position: relative;
+        }
+        
+        .abs {
+            position: absolute;
+            display: none;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        .rel:hover .abs {
+            display: block;
+            padding: 10px;
+            background-color: rgb(226, 225, 225);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rel">
+        <button>Dropdown Menu</button>
+        <div class="abs">
+            <ul>
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

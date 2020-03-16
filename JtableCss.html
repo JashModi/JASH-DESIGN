@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid grey;
+        }
+        
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            width: 25%;
+            padding: 10px;
+        }
+        
+        td {
+            text-align: center;
+        }
+        
+        th {
+            color: white;
+            background-color: rgb(255, 138, 5);
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgb(255, 159, 143);
+        }
+        
+        tr:hover {
+            background-color: teal;
+        }
+        
+        tfoot {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+
+        <thead>
+            <tr>
+                <th colspan="4">
+                    Employee Timecard
+                </th>
+            </tr>
+            <tr>
+                <td><strong>Day</strong></td>
+                <td><strong>Regular</strong></td>
+                <td><strong>Overtime</strong></td>
+                <td><strong>Total</strong></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MONDAY</td>
+                <td>8</td>
+                <td>0</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>TUESDAY</td>
+                <td>8</td>
+                <td>2.5</td>
+                <td>10.5</td>
+            </tr>
+            <tr>
+                <td>WEDNESDAY</td>
+                <td>8</td>
+                <td>0</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>THURSDAY</td>
+                <td>8</td>
+                <td>0</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>FRIDAY</td>
+                <td>8</td>
+                <td>0</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>SATURDAY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>SUNDAY</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><strong>TOTAL WEEKLY HOURS</strong></td>
+                <td><strong>40</strong></td>
+                <td><strong>8.5</strong></td>
+                <td><strong>48.5</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

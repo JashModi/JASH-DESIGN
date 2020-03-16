@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+}
+
+h1 {
+    position: absolute;
+    top: 38%;
+    left: 31%;
+    font-size: 90px;
+    margin: 0;
+    color: white;
+}
+
+h2 {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    font-size: 40px;
+    margin: 0;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.text-right {
+    display: inline-block;
+    float: right;
+}
+
+.logo {
+    padding-top: 20px;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.button {
+    border: 1px solid white;
+    position: absolute;
+    top: 57%;
+    left: 48%;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    position: fixed;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    top: 0;
+}
+
+h3 {
+    text-align: center;
+    font-size: 60px;
+    color: rgb(0, 20, 9);
+}
+
+i.fa {
+    color: #1ebba3;
+}
+
+.course {
+    border: 1px solid #1ebba3;
+    color: white;
+    background-color: #1ebba3;
+    font-size: 20px;
+    padding: 18px;
+    margin: 0;
+}
+
+pre {
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.feature {
+    background-color: rgb(194, 194, 194);
+}
+
+.divider {
+    color: #1ebba3;
+    margin-left: 48%;
+    width: 60px;
+    border: 3px solid #1ebba3;
+}
+
+.home {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/06/12/21/laptop-2592008__340.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}

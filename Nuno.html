@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUNO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        li {
+            display: inline;
+            padding: 10px;
+        }
+        
+        h1 {
+            position: absolute;
+            top: 38%;
+            left: 25%;
+            font-size: 90px;
+            margin: 0;
+            color: white;
+        }
+        
+        h2 {
+            position: absolute;
+            top: 51%;
+            left: 32%;
+            font-size: 40px;
+            margin: 0;
+            color: white;
+            letter-spacing: 2px;
+            word-spacing: 3px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .text-right {
+            display: inline-block;
+            float: right;
+        }
+        
+        .logo {
+            padding-top: 20px;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .button {
+            border: 1px solid white;
+            position: absolute;
+            top: 59%;
+            left: 47%;
+            font-size: 20px;
+            padding: 10px;
+            margin: 0;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
+        
+        nav {
+            position: fixed;
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            top: 0;
+            z-index: 3;
+        }
+        
+        h3 {
+            text-align: center;
+            font-size: 60px;
+            color: rgb(0, 20, 9);
+        }
+        
+        i.fa {
+            color: #1ebba3;
+        }
+        
+        .bootstrap {
+            text-align: center;
+        }
+        
+        .course {
+            border: 1px solid #1ebba3;
+            color: white;
+            background-color: #1ebba3;
+            font-size: 20px;
+            padding: 18px;
+            margin: 0;
+        }
+        
+        .course:hover {
+            background-color: #189582
+        }
+        
+        pre {
+            text-align: center;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        h4 {
+            text-align: center;
+            font-size: 50px;
+        }
+        
+        h5 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 2px;
+            font-size: 25px;
+        }
+        
+        .feature {
+            padding-top: 5px;
+            background-color: rgb(194, 194, 194);
+            padding-bottom: 5px;
+        }
+        
+        .divider {
+            color: #1ebba3;
+            margin-left: 48%;
+            width: 60px;
+            border: 3px solid #1ebba3;
+        }
+        
+        .long-divider {
+            color: #1ebba3;
+            margin-left: 33%;
+            width: 65%;
+            border: 1px solid #1ebba3;
+        }
+        
+        .pos {
+            position: relative;
+        }
+        
+        .abs {
+            position: absolute;
+        }
+        
+        .home {
+            margin: 0;
+            height: 100vh;
+            width: 100%;
+            background-image: url('https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999__340.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        
+        .feature-wrap {
+            padding: 20px 50px;
+        }
+        
+        .build {
+            position: relative;
+            margin: 0;
+            height: 600px;
+            width: 100%;
+            background-image: url('https://cdn.pixabay.com/photo/2016/11/23/13/40/iphone-1852901__340.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        
+        h6 {
+            position: absolute;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 52px;
+            color: white;
+            left: 35%;
+        }
+        
+        .boot {
+            font-size: 40px;
+            position: static;
+        }
+        
+        .client-head {
+            margin-top: 0;
+            padding-top: 50px;
+        }
+        
+        .owner {
+            width: 100%;
+            height: 560px;
+            margin: 0;
+            background-color: rgb(194, 194, 194);
+        }
+        
+        .ow {
+            width: 100%;
+            height: 300px;
+        }
+        
+        .eric-image {
+            padding-top: 20px;
+            padding-left: 25px;
+            overflow: auto;
+            height: 100%;
+        }
+        
+        .rachel-image {
+            padding-top: 20px;
+            padding-left: 25px;
+            overflow: auto;
+            height: 100%;
+        }
+        
+        .eric-image img {
+            height: 250px;
+            width: 250px;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        
+        .rachel-image img {
+            height: 250px;
+            width: 250px;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        
+        .eric {
+            width: 49%;
+            height: 100%;
+            display: inline-block;
+        }
+        
+        .rachel {
+            width: 49%;
+            height: 100%;
+            display: inline-block;
+        }
+        
+        .float-left {
+            float: left;
+        }
+        
+        .eric-cont {
+            text-align: center;
+        }
+        
+        .footer {
+            background-color: #40474e;
+            width: 100%;
+            height: 500px;
+        }
+        
+        .foot-logo {
+            text-align: center;
+            padding-top: 6%;
+        }
+        
+        .foot-content {
+            text-align: center;
+            font-size: 18px;
+            color: white;
+        }
+        
+        .contact-info {
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        
+        .social {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://kouta1612.github.io/LP_Product2/img/nuno.png" alt="" height="40px" width="150px">
+        </div>
+        <div class="text-right">
+            <ul>
+                <li>
+                    <a href="#HOME">Home</a>
+                </li>
+                <li> <a href="#COURSE">Course</a>
+                </li>
+                <li> <a href="#FEATURES">Features</a>
+                </li>
+                <li> <a href="#RESOURCES">Resources</a>
+                </li>
+                <li> <a href="#CLIENTS">Clients</a>
+                </li>
+                <li> <a href="#CONTACT">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="HOME">
+        <div class="home">
+            <div style="height: 100vh; width: 100%; background-color: rgba(0, 0, 0, 0.7);">
+                <h1>
+                    WELCOME TO NUNO
+                </h1>
+                <h2>
+                    UDEMY BOOTSTRAP 4 COURSE
+                </h2>
+                <a class="button" href="">GET STARTED</a>
+            </div>
+        </div>
+    </section>
+    <section style="height: 300px;" id="COURSE">
+        <div>
+            <h3>
+                Nuno Thema Advanced Bootstrap Cource
+            </h3>
+            <pre>
+                Learn Bootstrap by creating an advanced Bootstrap 4 Responsive Website Template from scratch, with no steps skipped!
+            </pre>
+            <div class="bootstrap"><a class="course" href="">BOOTSTRAP COURSE</a></div>
+        </div>
+    </section>
+    <section class="feature" id="FEATURES">
+        <div>
+            <h4>
+                FEATURES
+            </h4>
+        </div>
+        <div class="divider"></div>
+        <div class="feature-wrap">
+
+            <div class="icons" style="display: inline-block; text-align: center;width: 33%;">
+                <div style="display: inline-block;">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <h5>CUSTOM ANIMATION</h5>
+                    <p style="font-size: 19px; ">Animate.css and Waypoints.js allow for smooth <br> animations scrolling down the sites.</p>
+                </div>
+            </div>
+            <div class="icons" style="display: inline-block; text-align: center;width: 33%;">
+                <div style="display: inline-block;">
+                    <i class="fa fa-sliders fa-4x" aria-hidden="true"></i>
+                    <h5>CONTENT SLIDER</h5>
+                    <p style="font-size: 19px; ">Owl.Carousel.js makes navigating content <br> sliders seamless with it's content carousel <br> navigation.</p>
+                </div>
+            </div>
+            <div class="icons" style="display: inline-block; text-align: center;width: 33%;">
+                <div style="display: inline-block;">
+                    <i class="fa fa-wpforms fa-4x" aria-hidden="true"></i>
+                    <h5>CONTACT FORM</h5>
+                    <p style="font-size: 19px; ">The Bootstrap HTML form will send directly to <br> your email address using PHPMailer.php</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="build" id="RESOURCES">
+        <div style="height: 600px; width: 100%; background-color: rgba(0, 0, 0, 0.6);">
+            <h6>
+                BUILD WITH CARE
+            </h6>
+            <div class="divider" style="position: absolute; top: 35%;"></div><br><br>
+
+            <div style="position: absolute; top: 50%;width: 100%; ">
+                <div class="icons" style="display: inline-block;width: 33%; text-align: center;">
+                    <h1 class="boot">HTML 5</h1>
+                    <i class="fa fa-code fa-4x" aria-hidden="true"></i>
+                    <p style="font-size: 25px; color: white; font-weight: bold;">
+                        Built with the latest, HTML 5. </p>
+                </div>
+                <div class="icons" style="display: inline-block;width: 33%; text-align: center;">
+                    <h1 class="boot">BOOTSTRAP 4</h1>
+                    <i class="fa fa-bold fa-4x" aria-hidden="true"></i>
+                    <p style="font-size: 25px; color: white; font-weight: bold;">
+                        Built with the latest, BOOTSTRAP 4.
+                    </p>
+                </div>
+                <div class="icons" style="display: inline-block;width: 33%; text-align: center;">
+                    <h1 class="boot">CSS 3</h1>
+                    <i class="fa fa-css3 fa-4x" aria-hidden="true"></i>
+                    <p style="font-size: 25px; color: white; font-weight: bold;">
+                        Built with the latest, CSS 3.
+                    </p>
+                </div>
+            </div>
+    </section>
+    <section class="owner" id="CLIENTS">
+        <h4 class="client-head">
+            CLIENTS
+        </h4>
+        </div>
+        <div class="divider"></div><br><br>
+        <div class="ow">
+            <div class="eric">
+                <div class="eric-image">
+                    <img class="float-left" src="https://kouta1612.github.io/LP_Product2/img/client1.png" alt="">
+                    <span class="eric-cont">
+                        
+                        <p style="color: rgba(0, 0, 0, 0.8); font-size: 20px; padding-left: 10px; padding-top: 10px;">
+                            <i class="fa fa-quote-left " aria-hidden="true "></i>
+                           I see Nuno support as more of a partner to my company than a resource.I can pick up the phone and talk to anyone at any the way that they interat with us as a business makes it really simple.
+                    </p>
+                    <div class="long-divider"></div>
+                    <p style="color:rgba(0, 0, 0, 0.5); font-size: 15px; margin-right: 350px;">— Eric, Small Business Owner</p>
+                    </span>
+                </div>
+
+            </div>
+            <div class="rachel">
+                <div class="rachel-image">
+                    <img class="float-left" src="https://kouta1612.github.io/LP_Product2/img/client2.png" alt="">
+                    <span class="rachel-cont">
+                        
+                        <p style="color: rgba(0, 0, 0, 0.8); font-size: 20px; padding-left: 10px; padding-top: 10px;">
+                            <i class="fa fa-quote-left " aria-hidden="true "></i>
+                            The great thing about Nuno is it's not just a design. it's a responsive Bootstrap thema with animation. Nuno's layout is seamless the smooth parallax scrolling and a pop-up portfolio section for my images.                    </p>
+                    <div class="long-divider"></div>
+                    <p style="color:rgba(0, 0, 0, 0.5); font-size: 15px; margin-right: 350px;">— Rachel, Professional Photographer
+                    </p>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <section class="footer" id="CONTACT">
+        <footer>
+            <div class="foot-logo">
+                <img src="https://kouta1612.github.io/LP_Product2/img/nuno.png" alt="">
+            </div>
+            <div>
+                <p class="foot-content">At our core is a collection of design and development solutions that represent everything <br> your business needs to complete in the modern marcketplace.</p>
+            </div>
+            <div>
+                <h4 class="contact-info">
+                    Contact Info
+                </h4>
+                <p class="contact-info" style="font-size: 20px;">(888) 888-8888 <br><br> email@nuno.com
+
+                </p>
+            </div>
+            <div class="social">
+                <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>

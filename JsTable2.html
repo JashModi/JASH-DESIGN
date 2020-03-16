@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="Jsdisp"></div>
+</body>
+<script>
+    function studentData(sname, maths, chemistry, physics) {
+        this.StudentName = sname;
+        this.mathsMarks = maths;
+        this.chemistryMarks = chemistry;
+        this.physicsMarks = physics;
+        this.total = this.mathsMarks + this.chemistryMarks + this.physicsMarks;
+        this.avg = this.total / 3;
+    }
+
+    var studentList = [];
+    var studentDataDisplay = "";
+    var counter = 1;
+    studentDataDisplay += "<table border=\"1\">";
+    studentDataDisplay += "<tr>";
+    studentDataDisplay += "<th>Roll No.</th>";
+    studentDataDisplay += "<th>Student Name</th>";
+    studentDataDisplay += "<th>Maths</th>";
+    studentDataDisplay += "<th>Chemistry</th>";
+    studentDataDisplay += "<th>Physics</th>";
+    studentDataDisplay += "<th>Total</th>";
+    studentDataDisplay += "<th>Average</th>";
+    studentDataDisplay += "</tr>";
+
+
+
+    studentList.push(new studentData("Bhavik Mistry", 89, 98, 88));
+    studentList.push(new studentData("Jash modi", 99, 98, 88));
+    studentList.push(new studentData("Bhavik Mistry", 89, 98, 88));
+    studentList.push(new studentData("Jash modi", 99, 98, 88));
+    studentList.push(new studentData("Bhavik Mistry", 89, 98, 88));
+    studentList.push(new studentData("Jash modi", 99, 98, 88));
+    studentList.push(new studentData("Bhavik Mistry", 89, 98, 88));
+
+    studentList.forEach(function(value) {
+        studentDataDisplay += "<tr>";
+
+        studentDataDisplay += "<td>" + counter + "</td>";
+        studentDataDisplay += "<th>" + value.StudentName + "</th>";
+        studentDataDisplay += "<td>" + value.mathsMarks + "</td>";
+        studentDataDisplay += "<td>" + value.chemistryMarks + "</td>";
+        studentDataDisplay += "<td>" + value.physicsMarks + "</td>";
+        studentDataDisplay += "<th>" + value.total + "</th>";
+        studentDataDisplay += "<th>" + value.avg + "</th>";
+        studentDataDisplay += "</tr>";
+        counter++;
+    });
+    studentDataDisplay += "</table>";
+
+    document.getElementById("Jsdisp").innerHTML = studentDataDisplay;
+</script>
+
+</html>

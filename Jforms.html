@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FORMS</title>
+</head>
+
+<body>
+    <h1><mark> FILL THE FORM </mark></h1>
+    <form>
+        <label for=""><strong>First Name : </strong></label><input type="text" name="name" id="" disabled value="Jash">
+        <br><br>
+        <label for=""><strong>Last Name : </strong></label><input type="text" name="lname" id="" placeholder="Enter Last Name" size="40" maxlength="20" autocomplete="off" autofocus>
+        <br><br>
+        <label for=""><strong>Mobile Number : </strong></label><input type="tel" name="Mobile" id="" pattern="[0-9]{10}">
+        <br><br>
+        <label for=""><strong>Age : </strong></label><input type="number" name="Age" id="" min="12" max="50" step="2">
+        <br><br>
+        <label for=""><strong>Email id : </strong></label><input type="email" name="Email" id="" required>
+        <br><br>
+        <label for=""><strong>Gender : </strong></label> Male
+        <input type="radio" name="gender" id="" value="Male" checked> Female
+        <input type="radio" name="gender" id="" value="Female">
+        <br><br>
+        <label for=""><strong>D.O.B : </strong></label><input type="date" name="D.O.B" id="" max="2020-02-12" min="2020-02-08">
+        <br><br>
+        <label for=""><strong>Hobby : </strong></label> Reading
+        <input type="checkbox" name="hobby" id="" value="Reading" checked> Writing
+        <input type="checkbox" name="hobby" id="" value="Writing">
+        <br><br>
+        <label for=""><strong>State : </strong></label><input type="search" name="State" id="">
+        <br><br>
+        <label for=""><strong>City : </strong></label><input type="search" name="City" id="">
+        <br><br>
+        <label for=""><strong>File : </strong></label><input type="file" name="file" id="" multiple>
+        <br><br>
+        <label for=""><strong>Password : </strong></label><input type="password" name="password" id="">
+        <br><br>
+        <label for=""><strong>Confirm Password : </strong></label><input type="password" name="Confirm password" id="">
+        <br><br>
+        <input type="reset" value="Reset"> <input type="submit" value="submit" formenctype="multipart/form-data">
+    </form>
+</body>
+
+</html>

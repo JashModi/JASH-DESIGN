@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsTable</title>
+</head>
+
+<body>
+    <div id="displayJS"></div>
+</body>
+<script>
+    function EmployeeData(ename, ejob, esalary) {
+        this.EmployeeName = ename;
+        this.EmployeeJobPost = ejob;
+        this.EmployeeSalary = esalary;
+
+        this.displayData = this.EmployeeName + " " + this.EmployeeJobPost + " " + this.EmployeeSalary;
+    }
+
+    var disTable = '';
+
+    disTable += "<table border=\"1\">";
+    disTable += "<tr>";
+    disTable += "<th> Employee Name</th>";
+    disTable += "<th> Employee Job Post</th>";
+    disTable += "<th> Employee Salary</th>";
+    disTable += "<th> Company Name</th>";
+    disTable += "</tr>";
+
+    var EmployeeList = [];
+    var counter = 1;
+    EmployeeList.push(new EmployeeData("Bhavik Mistry", "Developer", 78000));
+    EmployeeList.push(new EmployeeData("Jash Modi", "Developer", 78000));
+    EmployeeList.push(new EmployeeData("Akshay Soni", "Instructor", 178000));
+    EmployeeList.push(new EmployeeData("Sumit More", "Instructor", 178000));
+    EmployeeList.push(new EmployeeData("Bhavik Mistry", "Designer", 56000));
+    EmployeeData.prototype.companyName = "IIHT";
+    EmployeeList.forEach(function(value) {
+        value.companyName += counter;
+        disTable += "<tr>";
+        disTable += "<td>" + value.EmployeeName + "</td>";
+        disTable += "<td>" + value.EmployeeJobPost + "</td>";
+        disTable += "<td>" + value.EmployeeSalary + "</td>";
+        disTable += "<td>" + value.companyName + "</td>";
+        disTable += "</tr>";
+        counter++;
+
+    });
+    disTable += "</table>";
+    document.getElementById("displayJS").innerHTML = disTable;
+</script>
+
+</html>
